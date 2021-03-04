@@ -32,3 +32,18 @@ suit_counters = {'d': 0,
                  'h': 0,
                  's': 0,
                  'c': 0}
+
+## --- TODO:
+## sorting dont work because we are using strings for everything
+## can change everything to a numerical representation
+## and use enums
+
+# Sort our cards
+cards_dealt.sort(reverse=True)
+print("Cards dealt: ", cards_dealt)
+
+
+# Count how many of each face and suit in dealt cards
+for card in cards_dealt:
+  face_counters[card.face] += 1
+  suit_counters[card.suit] += 1
