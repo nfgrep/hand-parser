@@ -33,6 +33,7 @@ suit_counters = {'d': 0,
                  's': 0,
                  'c': 0}
 
+
 ## --- TODO:
 ## sorting dont work because we are using strings for everything
 ## can change everything to a numerical representation
@@ -47,3 +48,17 @@ print("Cards dealt: ", cards_dealt)
 for card in cards_dealt:
   face_counters[card.face] += 1
   suit_counters[card.suit] += 1
+
+
+# Check for pairs, trips and quads
+duplicates = {}
+
+for face,count in face_counters.items():
+  if count == 2:
+    duplicates['pair'] = face
+  elif count == 3:
+    duplicates['trip'] = face
+  elif count == 4:
+    duplicates['quad'] = face
+
+print("duplicates in hand: ", duplicates)
