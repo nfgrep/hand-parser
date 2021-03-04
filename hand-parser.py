@@ -72,3 +72,12 @@ for suit,count in suit_counters.items():
     flushes[suit] = count
 
 print("flushes in hand: ", flushes)
+
+
+# Check for full houses:
+full_houses = {}  # 'suit ful' : 'of suit'
+
+if 'trip' in duplicates and 'pair' in duplicates:
+  full_houses[duplicates['trip']] = duplicates['pair']
+
+print("Full houses (suit-full-of : suit): ", full_houses)
