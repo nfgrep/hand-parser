@@ -62,3 +62,13 @@ for face,count in face_counters.items():
     duplicates['quad'] = face
 
 print("duplicates in hand: ", duplicates)
+
+
+# Check for flushes
+flushes = {}
+
+for suit,count in suit_counters.items():
+  if count == 5:
+    flushes[suit] = count
+
+print("flushes in hand: ", flushes)
